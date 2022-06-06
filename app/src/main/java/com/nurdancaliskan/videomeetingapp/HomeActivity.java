@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import us.zoom.sdk.MeetingService;
+import us.zoom.sdk.StartMeetingOptions;
 import us.zoom.sdk.ZoomSDK;
 
 public class HomeActivity extends AppCompatActivity {
@@ -28,5 +30,10 @@ public class HomeActivity extends AppCompatActivity {
 
     private void InstantMeeting() {
         ZoomSDK sdk = ZoomSDK.getInstance();
+
+        MeetingService meetingService = sdk.getMeetingService();
+        StartMeetingOptions options = new StartMeetingOptions();
+
+        meetingService.startInstantMeeting(this,options);
     }
 }

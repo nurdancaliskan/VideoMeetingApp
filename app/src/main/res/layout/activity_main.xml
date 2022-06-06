@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#E9ECEC">
 
    <LinearLayout
+
+       android:background="@color/white"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical"
@@ -25,37 +29,47 @@
 
 
                <EditText
+
+                   android:paddingStart="5sp"
+                   android:textSize="20sp"
                    android:id="@+id/txt_name"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:ems="10"
+                   android:fontFamily="@font/product_sans_regular"
+                   android:hint="Name"
                    android:inputType="textPersonName"
-                   android:hint="Name" />
+                   android:minHeight="48dp" />
 
                <EditText
+                   android:paddingStart="5sp"
+                   android:textSize="20sp"
                    android:id="@+id/txt_number"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:ems="10"
+                   android:fontFamily="@font/product_sans_regular"
+                   android:hint="Meeting Number"
                    android:inputType="textPersonName"
-                   android:hint="Meeting Number" />
+                   android:minHeight="48dp" />
 
                <EditText
+                   android:paddingStart="5sp"
+                   android:textSize="20sp"
                    android:id="@+id/txt_password"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:ems="10"
+                   android:fontFamily="@font/product_sans_regular"
+                   android:hint="Meeting Password"
                    android:inputType="textPassword"
-                   android:hint="Meeting Password" />
+
+                   android:minHeight="48dp" />
 
            </LinearLayout>
        </androidx.cardview.widget.CardView>
 
-       <Button
-           android:id="@+id/btnJoinMeeting"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="Join Meeting" />
+
 
        <androidx.cardview.widget.CardView
            android:layout_width="match_parent"
@@ -66,34 +80,18 @@
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:orientation="vertical">
+               android:orientation="vertical"/>
 
-
-               <EditText
-                   android:layout_marginTop="50sp"
-                   android:id="@+id/etEmail"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:ems="10"
-                   android:hint="Email"
-                   android:inputType="textPersonName" />
-
-               <EditText
-                   android:id="@+id/etPassword"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:ems="10"
-                   android:inputType="textPassword"
-                   android:hint="Password" />
-
-           </LinearLayout>
+           <Button
+               android:id="@+id/btnJoinMeeting"
+               android:textSize="20sp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/grey"
+               android:fontFamily="@font/product_sans_regular"
+               android:text="Join Meeting"
+               android:textColor="@color/white" />
        </androidx.cardview.widget.CardView>
-
-       <Button
-           android:id="@+id/btn_login"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="Login" />
 
    </LinearLayout>
 

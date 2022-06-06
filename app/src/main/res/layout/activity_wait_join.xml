@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WaitJoinActivity"
-    android:padding="25sp">
+    android:padding="25sp"
+    android:background="#E9ECEC">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,41 +15,63 @@
         android:orientation="vertical">
 
         <TextView
+            android:paddingStart="5sp"
+            android:textSize="20sp"
+            android:minHeight="48dp"
+            android:background="@color/white"
             android:id="@+id/tvMTP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Meeting Topic"/>
 
         <TextView
+            android:paddingStart="5sp"
+            android:textSize="20sp"
+            android:minHeight="48dp"
+            android:background="@color/white"
             android:id="@+id/tvMD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Meeting Date"/>
 
         <TextView
+            android:paddingStart="5sp"
+            android:textSize="20sp"
+            android:minHeight="48dp"
+            android:background="@color/white"
             android:id="@+id/tvMT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Meeting Time"/>
+            android:text="Meeting Time"
+            android:fontFamily="@font/product_sans_regular"/>
 
         <TextView
+            android:paddingStart="5sp"
+            android:textSize="20sp"
+            android:minHeight="48dp"
+            android:background="@color/white"
             android:id="@+id/tvMID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Text ID"/>
+            android:text="Text ID"
+            android:fontFamily="@font/product_sans_regular"/>
 
     </LinearLayout>
 
     <Button
         android:id="@+id/btnLM"
-        android:layout_width="wrap_content"
+        android:layout_width="195dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-
-        android:layout_marginStart="100sp"
-        android:layout_marginTop="105dp"
-        android:text="Leave Meeting" />
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200sp"
+        android:layout_marginEnd="100sp"
+        android:background="@color/grey"
+        android:fontFamily="@font/product_sans_regular"
+        android:text="Leave Meeting"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
 </RelativeLayout>

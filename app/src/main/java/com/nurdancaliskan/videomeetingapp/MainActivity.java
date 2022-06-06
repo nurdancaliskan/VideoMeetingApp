@@ -21,8 +21,8 @@ import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
 
 public class MainActivity extends AppCompatActivity {
-    EditText Name,MN,MP,Email,Password;
-    Button Join,Login;
+    EditText Name,MN,MP;
+    Button Join;
     private ZoomSDKAuthenticationListener authListener = new ZoomSDKAuthenticationListener() {
         @Override
         public void onZoomSDKLoginResult(long l) {
@@ -64,10 +64,8 @@ public class MainActivity extends AppCompatActivity {
         Name = findViewById(R.id.txt_name);
         MN = findViewById(R.id.txt_number);
         MP = findViewById(R.id.txt_password);
-        Email = findViewById(R.id.etEmail);
-        Password = findViewById(R.id.etPassword);
 
-        Login = findViewById(R.id.btn_login);
+
         Join = findViewById(R.id.btnJoinMeeting);
 
 
@@ -88,28 +86,6 @@ public class MainActivity extends AppCompatActivity {
           }
       });
 
-      Login.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-              if(Email != null && Email.getText() != null && Password != null && Password.getText() !=null) {
-                String email = Email.getText().toString();
-                String password = Password.getText().toString();
-
-                  if(email.trim().length()>0 && password.trim().length()>0 ){
-                      login(email,password);
-                  }
-
-              }
-          }
-      });
-
-    }
-
-    private void login(String email, String password) {
-        int result = ZoomSDK.getInstance().tryAutoLoginZoom();
-        if (result == ZoomApiError.ZOOM_API_ERROR_SUCCESS) {
-            ZoomSDK.getInstance().addAuthenticationListener(authListener);
-        }
     }
     
 
